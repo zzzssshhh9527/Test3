@@ -1,5 +1,5 @@
 <template>
-  <!--  主界面-->
+  <!--      主界面-->
   <p>个人通讯录系统</p>
   <div class="mb-4">
     <el-button type="primary" @click="openAddUserDialog">添加</el-button>
@@ -88,6 +88,9 @@ export default {
   methods: {
     openAddUserDialog() {
       const _self = this
+      _self.addUserInfo.name = null
+      _self.addUserInfo.address = null
+      _self.addUserInfo.phone = null
       _self.addUserInfo.id = _self.tableData.length + 1
       _self.isOpenAddDialog = true
     },
@@ -146,6 +149,7 @@ export default {
     this.query()
   }
 }
+
 </script>
 
 <style>
@@ -157,4 +161,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
